@@ -1,0 +1,158 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;700&display=swap');
+
+
+:root {
+    font-family: 'Montserrat', sans-serif;
+    --main-color: #0ea5e9;
+    --bborder: 1px solid black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a,
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 4px;
+    text-align: center;
+}
+
+/* START HEADER */
+.header {
+    grid-column: 2 / -1;
+    /* is a grid */
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+.search-and-profile {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: start;
+}
+
+.search {
+    display: grid;
+    justify-content: start;
+}
+
+.search div:first-child {
+    grid-column: 1fr;
+    
+
+}
+/* END HEADER */
+
+
+/* START SIDEBAR */
+.sidebar {
+    background-color: var(--main-color);
+    color: white;
+    padding-top: 20px;
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    grid-row: 1 / span 2;
+}
+
+.sidebar h1{
+    text-align: left;
+    font-size:1.2rem;
+}
+
+.logo {
+    padding-left: 0px;
+    position:relative;
+    left:-7px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+
+.first-links,
+.second-links {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+    font-weight: 600;
+}
+
+.first-links {
+    margin-bottom: 50px;
+}
+
+.first-links li,
+.second-links li{
+    border :none;
+    display: flex;
+    align-items: end;
+    gap: 15px;
+}
+
+/* END SIDEBAR */
+
+
+/* START MAIN-CONTENT */
+
+.main-content {
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;    
+}
+
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.projects h3 {
+    text-align: left;
+}
+
+
+.project {
+    text-align: left;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 5px;
+    border-left-color: orange;
+    border-left-width: 7px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0.5, 0.2);
+    /* is a grid */
+    display: grid;
+}
+
+.project .project-interact {
+    display: flex;
+    justify-content: end;
+    gap: 40px;
+}
+
+
+
+
+/* END MAIN-CONTENT */
