@@ -1,10 +1,9 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;600;700&display=swap');
-
 
 :root {
     font-family: 'Montserrat', sans-serif;
     --main-color: #0ea5e9;
+    --grey: #E2E8EF;
     --bborder: 1px solid black;
 }
 
@@ -29,8 +28,7 @@ ul {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 4fr;
-    gap: 4px;
+    grid-template-columns: minmax(225px, 1fr) 4fr;
     text-align: center;
 }
 
@@ -40,24 +38,60 @@ ul {
     /* is a grid */
     display: grid;
     grid-template-columns: 3fr 2fr;
+    box-shadow: 0px 4px 3px rgba(0, 0, 0.5, 0.15);
 }
 
 .search-and-profile {
     display: grid;
     grid-template-columns: 100%;
     justify-content: start;
+    padding: 20px 10px 20px 50px;
+    gap: 20px;
 }
 
 .search {
     display: grid;
+}
+
+.search-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.profile {
+    display: flex;
     justify-content: start;
+    align-items: center;
+    gap: 15px;
 }
 
-.search div:first-child {
-    grid-column: 1fr;
-    
-
+.profile-text {
+    text-align: left;
 }
+
+.profile-text p{
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.profile-text h2 {
+    padding-top: 5px;
+    font-size: 1.2rem;
+}
+
+.search-grid input {
+    flex: 1;
+    border-radius: 15px;
+    border: none;
+    background-color: var(--grey);
+    height: 29px;
+    padding-left: 15px;
+}
+
+
+
 /* END HEADER */
 
 
@@ -141,7 +175,7 @@ ul {
     border-radius: 5px;
     border-left-color: orange;
     border-left-width: 7px;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0.5, 0.2);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0.5, 0.15);
     /* is a grid */
     display: grid;
 }
