@@ -121,11 +121,7 @@ ul {
     padding: 8px 0;
     color: white;
     border-radius: 20px;
-    width: 80px;
-}
-
-.interact-buttons > div {
-    /* flex: 1; */
+    width: 85px;
 }
 
 
@@ -137,7 +133,7 @@ ul {
     background-color: var(--main-color);
     color: white;
     padding-top: 20px;
-    padding-left: 25px;
+    padding-left: 30px;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -152,7 +148,7 @@ ul {
 .logo {
     padding-left: 0px;
     position:relative;
-    left:-7px;
+    left:-12px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -192,7 +188,8 @@ ul {
     grid-template-columns: 2.5fr 1fr;
     background-color: var(--grey);
     padding-left: 17px;
-    padding-top: 30px;
+    padding-top: 37px;
+    padding-bottom: 70px;
 
 }
 
@@ -200,7 +197,7 @@ ul {
 .project-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 25px;
 }
 
 .projects h3 {
@@ -212,20 +209,33 @@ ul {
 
 .project {
     text-align: left;
-    border: 1px solid black;
-    padding: 20px;
-    border-radius: 5px;
+    padding: 35px 30px;
+    border-radius: 8px;
+    border-left: 0 solid #F0B429;
     border-left-color: #F0B429;
     border-left-width: 7px;
     background-color: white;
     box-shadow: 2px 2px 3px rgba(0, 0, 0.5, 0.15);
     /* is a grid */
     display: grid;
+    grid-row: 100px 1fr;
+    gap: 10px
 }
 
-.project .project-interact {
+.project-text {
+    border: none;
+}
+
+.project-text p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.project-interact {
     display: flex;
     justify-content: end;
+    align-items: center;
     gap: 40px;
+    /* border: var(--bborder) */
 }
 /* END MAIN-CONTENT */
