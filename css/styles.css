@@ -2,7 +2,7 @@
 
 :root {
     font-family: 'Montserrat', sans-serif;
-    --main-color: #0ea5e9;
+    --main-color: #1A92D3;
     --grey: #E2E8EF;
     --bborder: 1px solid black;
 }
@@ -38,7 +38,9 @@ ul {
     /* is a grid */
     display: grid;
     grid-template-columns: 3fr 2fr;
-    box-shadow: 0px 4px 3px rgba(0, 0, 0.5, 0.15);
+    position: relative;
+    z-index: 10;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 .search-and-profile {
@@ -46,7 +48,7 @@ ul {
     grid-template-columns: 100%;
     justify-content: start;
     padding: 20px 10px 20px 50px;
-    gap: 20px;
+    gap: 30px;
 }
 
 .search {
@@ -90,6 +92,41 @@ ul {
     padding-left: 15px;
 }
 
+.interact {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2px;
+    gap: 15px;
+}
+
+.interact-notification{
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    gap: 30px;
+}
+
+.interact-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+}
+
+.interact button {
+    background-color: var(--main-color);
+    border: none;
+    padding: 8px 0;
+    color: white;
+    border-radius: 20px;
+    width: 80px;
+}
+
+.interact-buttons > div {
+    /* flex: 1; */
+}
 
 
 /* END HEADER */
@@ -150,10 +187,13 @@ ul {
 
 
 /* START MAIN-CONTENT */
-
 .main-content {
     display: grid;
-    grid-template-columns: 2.5fr 1fr;    
+    grid-template-columns: 2.5fr 1fr;
+    background-color: var(--grey);
+    padding-left: 17px;
+    padding-top: 30px;
+
 }
 
 
@@ -165,6 +205,8 @@ ul {
 
 .projects h3 {
     text-align: left;
+    font-size: 1rem;
+    margin-bottom: 15px;
 }
 
 
@@ -173,8 +215,9 @@ ul {
     border: 1px solid black;
     padding: 20px;
     border-radius: 5px;
-    border-left-color: orange;
+    border-left-color: #F0B429;
     border-left-width: 7px;
+    background-color: white;
     box-shadow: 2px 2px 3px rgba(0, 0, 0.5, 0.15);
     /* is a grid */
     display: grid;
@@ -185,8 +228,4 @@ ul {
     justify-content: end;
     gap: 40px;
 }
-
-
-
-
 /* END MAIN-CONTENT */
