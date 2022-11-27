@@ -5,6 +5,8 @@
     --main-color: #1A92D3;
     --grey: #E2E8EF;
     --bborder: 1px solid black;
+    --width-small-profile: 45px;
+    --height-small-profile: 45px;
 }
 
 * {
@@ -18,12 +20,21 @@ a:visited {
     text-decoration: none;
 }
 
+p {
+    color: #636363;
+}
+
 a:hover {
     color: white;
 }
 
 ul {
     list-style-type: none;
+}
+
+.small-profile {
+    width: var(--width-small-profile);
+    height: var(--height-small-profile);
 }
 
 .container {
@@ -179,6 +190,11 @@ ul {
     gap: 15px;
 }
 
+.first-links img,
+.second-links img {
+    width: 24px;
+}
+
 /* END SIDEBAR */
 
 
@@ -187,10 +203,10 @@ ul {
     display: grid;
     grid-template-columns: 2.5fr 1fr;
     background-color: var(--grey);
-    padding-left: 17px;
+    padding-left: 20px;
     padding-top: 37px;
     padding-bottom: 70px;
-
+    gap: 25px;
 }
 
 
@@ -215,11 +231,15 @@ ul {
     border-left-color: #F0B429;
     border-left-width: 7px;
     background-color: white;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0.5, 0.15);
+    box-shadow: 2px 3px 3px rgba(0, 0, 0.5, 0.15);
     /* is a grid */
     display: grid;
-    grid-row: 100px 1fr;
+    grid-template-rows: 4fr 1fr;
     gap: 10px
+}
+
+.projects h4 {
+    margin-bottom: 5px;
 }
 
 .project-text {
@@ -239,3 +259,94 @@ ul {
     /* border: var(--bborder) */
 }
 /* END MAIN-CONTENT */
+
+
+/* START RIGHT-BAR */
+
+.right-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 30px;
+    text-align: left;
+    gap: 45px;
+}
+
+.announcements-container {
+    background-color: white;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0.5, 0.15);
+    border-radius: 8px;
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.announcements h3{
+    text-align: left;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.announcement-border {
+    width: 100%;
+    height: 1px;
+    background-color: lightgray;
+}
+
+.announcements h4 {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+.announcements p {
+    font-size: 0.8rem;
+}
+
+.trending-container {
+    background-color: white;
+    box-shadow: 2px 3px 3px rgba(0, 0, 0.5, 0.15);
+    border-radius: 8px;
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 25px;
+}
+
+
+.trending h3{
+    text-align: left;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.all-twitter {
+    display: flex;
+    justify-content: left;
+    gap: 15px;
+}
+
+.twitter-profile {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 0.8rem;
+}
+
+/* the name of twitter profile with @ */
+.twitter-profile p:first-child{
+    font-weight: 600;
+    color: black;
+}
+
+/*the first div is the image  */
+.trending-container > div > div:first-child {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+/* END RIGHT-BAR */
